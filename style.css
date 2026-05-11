@@ -38,6 +38,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 .project-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -60,4 +61,46 @@ a:hover {
 .project-card p {
   margin: 0;
   color: #dbe4f0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 10px;
+}
+
+nav h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+.hero {
+  text-align: center;
+  padding: 10px 20px 30px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #9ca3af;
+  font-size: 14px;
 }
