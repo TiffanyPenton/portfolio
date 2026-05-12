@@ -1,114 +1,368 @@
+/* =========================
+   Base / Reset
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #0f172a;
-  color: #f8fafc;
-  line-height: 1.6;
-}
-
-header {
-  background-color: #111827;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 30px 20px;
-}
-
-section {
-  margin-bottom: 40px;
-  padding: 20px;
-  background-color: #1e293b;
-  border-radius: 10px;
-}
-
-h1, h2 {
-  margin-top: 0;
-}
-
-a {
-  color: #38bdf8;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.project-card {
-  background-color: #0f1b2d;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #2b3a50;
-}
-
-.project-card h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
-.project-card p {
-  margin: 0;
-  color: #dbe4f0;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 20px 10px;
-}
-
-nav h1 {
-  font-size: 24px;
-  margin: 0;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 16px;
-  margin: 0;
-  padding: 0;
-}
-
-nav a {
-  color: #e5e7eb;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: #38bdf8;
-}
-
-.hero {
-  text-align: center;
-  padding: 10px 20px 30px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #9ca3af;
-  font-size: 14px;
+  background: #efefeb;
+  color: #1f1f1f;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.7;
 }
 
 img {
   max-width: 100%;
-  height: auto;
   display: block;
-  margin: 20px auto;
-  border-radius: 10px;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* =========================
+   General Layout
+========================= */
+
+main {
+  width: 100%;
+}
+
+section {
+  width: 100%;
+}
+
+.content-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* =========================
+   Navigation
+========================= */
+
+.top-nav {
+  background: #1f3446;
+  color: #f4f1ea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.brand a {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+  opacity: 0.75;
+}
+
+/* =========================
+   Hero / Intro blocks
+========================= */
+
+.hero,
+.page-intro,
+.project-hero {
+  background: #1f3446;
+  color: #f4f1ea;
+  text-align: center;
+}
+
+.hero,
+.page-intro {
+  padding: 72px 20px 64px;
+}
+
+.project-hero {
+  padding: 34px 20px 30px;
+  margin-bottom: 48px;
+}
+
+.hero h1,
+.page-intro h1,
+.project-hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 4.2rem;
+}
+
+.page-intro h1,
+.project-hero h1 {
+  font-size: 3.8rem;
+}
+
+.hero p,
+.page-intro p,
+.project-hero p {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   Home page sections
+========================= */
+
+.home-section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.section-text {
+  max-width: 800px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.skills-list li {
+  border: 1px solid rgba(31, 31, 31, 0.16);
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  font-size: 0.95rem;
+}
+
+/* =========================
+   Project cards page
+========================= */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  padding: 54px 32px 70px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(31, 31, 31, 0.1);
+  padding: 18px 18px 22px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+
+.project-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   Generic page content
+========================= */
+
+.page-section {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 54px 32px;
+}
+
+.page-section h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.page-section p {
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   Project detail pages
+========================= */
+
+.project-detail {
+  border-top: 1px solid #8da3b5;
+  padding: 28px 32px 70px;
+}
+
+.project-detail-grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 54px;
+  align-items: start;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+}
+
+.project-copy h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.project-copy p {
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+
+.project-copy strong {
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* =========================
+   Buttons / links
+========================= */
+
+.text-link {
+  display: inline-block;
+  margin-top: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.92rem;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+
+.text-link:hover {
+  opacity: 0.72;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.site-footer {
+  border-top: 1px solid rgba(31, 31, 31, 0.12);
+  padding: 24px 32px;
+  text-align: center;
+  font-size: 0.92rem;
+  color: #444;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1000px) {
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 760px) {
+  .top-nav {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero h1 {
+    font-size: 2.9rem;
+  }
+
+  .page-intro h1,
+  .project-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    padding: 38px 20px 50px;
+  }
+
+  .page-section,
+  .project-detail,
+  .content-wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero,
+  .page-intro {
+    padding: 54px 20px 50px;
+  }
+
+  .project-hero {
+    pad
