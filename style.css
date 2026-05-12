@@ -1,7 +1,3 @@
-/* =========================
-   Base / Reset
-========================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -33,27 +29,16 @@ ul {
   list-style: none;
 }
 
-/* =========================
-   General Layout
-========================= */
-
-main {
-  width: 100%;
-}
-
+main,
 section {
   width: 100%;
 }
 
 .content-wrap {
-  max-width: 1180px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 32px;
 }
-
-/* =========================
-   Navigation
-========================= */
 
 .top-nav {
   background: #1f3446;
@@ -86,10 +71,6 @@ section {
 .nav-links a:hover {
   opacity: 0.75;
 }
-
-/* =========================
-   Hero / Intro blocks
-========================= */
 
 .hero,
 .page-intro,
@@ -136,10 +117,6 @@ section {
   line-height: 1.8;
 }
 
-/* =========================
-   Home page sections
-========================= */
-
 .home-section {
   padding: 60px 0;
 }
@@ -149,18 +126,22 @@ section {
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .section-text {
-  max-width: 800px;
+  max-width: 760px;
+  margin: 0 auto;
   font-size: 1rem;
   line-height: 1.8;
+  text-align: center;
 }
 
 .skills-list {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
+  justify-content: center;
   margin-top: 24px;
 }
 
@@ -172,16 +153,12 @@ section {
   font-size: 0.95rem;
 }
 
-/* =========================
-   Project cards page
-========================= */
-
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   padding: 54px 32px 70px;
-  max-width: 1180px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -189,6 +166,7 @@ section {
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(31, 31, 31, 0.1);
   padding: 18px 18px 22px;
+  text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -214,16 +192,14 @@ section {
 .project-card p {
   font-size: 0.98rem;
   line-height: 1.8;
+  margin: 0 auto;
 }
 
-/* =========================
-   Generic page content
-========================= */
-
 .page-section {
-  max-width: 980px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 54px 32px;
+  text-align: center;
 }
 
 .page-section h2 {
@@ -234,32 +210,40 @@ section {
 }
 
 .page-section p {
-  margin-bottom: 18px;
+  margin: 0 auto 18px;
   font-size: 1rem;
   line-height: 1.8;
+  max-width: 760px;
 }
-
-/* =========================
-   Project detail pages
-========================= */
 
 .project-detail {
   border-top: 1px solid #8da3b5;
-  padding: 28px 32px 70px;
+  padding: 28px 0 70px;
 }
 
 .project-detail-grid {
-  max-width: 1180px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 0 32px;
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 54px;
   align-items: start;
 }
 
+.project-image {
+  display: flex;
+  justify-content: center;
+}
+
 .project-image img {
   width: 100%;
+  max-width: 500px;
   height: auto;
+}
+
+.project-copy {
+  text-align: left;
 }
 
 .project-copy h2 {
@@ -280,10 +264,6 @@ section {
   font-weight: 700;
 }
 
-/* =========================
-   Buttons / links
-========================= */
-
 .text-link {
   display: inline-block;
   margin-top: 12px;
@@ -298,10 +278,6 @@ section {
   opacity: 0.72;
 }
 
-/* =========================
-   Footer
-========================= */
-
 .site-footer {
   border-top: 1px solid rgba(31, 31, 31, 0.12);
   padding: 24px 32px;
@@ -309,10 +285,6 @@ section {
   font-size: 0.92rem;
   color: #444;
 }
-
-/* =========================
-   Responsive
-========================= */
 
 @media (max-width: 1000px) {
   .project-grid {
@@ -322,6 +294,10 @@ section {
   .project-detail-grid {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .project-copy {
+    text-align: left;
   }
 }
 
@@ -352,8 +328,11 @@ section {
     padding: 38px 20px 50px;
   }
 
-  .page-section,
-  .project-detail,
+  .page-section {
+    padding: 40px 20px;
+  }
+
+  .project-detail-grid,
   .content-wrap {
     padding-left: 20px;
     padding-right: 20px;
@@ -365,4 +344,7 @@ section {
   }
 
   .project-hero {
-    pad
+    padding: 28px 20px 24px;
+    margin-bottom: 34px;
+  }
+}
